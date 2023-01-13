@@ -1,0 +1,42 @@
+version: "3.1"
+
+stories:
+
+- story: Full weather
+  steps:
+  - intent: weather_city
+  - slot_was_set:
+    - location: true
+  - action: action_get_coordinates
+  - slot_was_set:
+    - coordinates: true
+  - action: action_tell_weather
+  - action: utter_goodbye
+
+- story: Hello and know weather
+  steps:
+  - intent: greet
+  - action: utter_ask_weather
+  - intent: affirm
+  - action: utter_tell_the_city
+  - intent: city
+  - slot_was_set:
+    - location: true
+  - action: action_get_coordinates
+  - slot_was_set:
+    - coordinates: true
+  - action: action_tell_weather
+  - action: utter_goodbye
+
+- story: Know weather
+  steps:
+  - intent: weather
+  - action: utter_tell_the_city
+  - intent: city
+  - slot_was_set:
+    - location: true
+  - action: action_get_coordinates
+  - slot_was_set:
+    - coordinates: true
+  - action: action_tell_weather
+  - action: utter_goodbye

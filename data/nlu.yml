@@ -1,0 +1,93 @@
+version: "3.1"
+
+nlu:
+#- intent: start
+#  examples: |
+#    - /start
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - /start
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: weather
+  examples: |
+    - tell me the weather
+    - I want to know the weather
+    - weather please
+    - what's the weather today
+    - what's the temperature right now
+    - hows the weather going to be
+    - i want to know the temperature
+
+- intent: weather_city
+  examples: |
+    - tell me the weather in [Paris](loc)
+    - I want to know the weather in [London](loc)
+    - weather for [Athens](loc) please
+    - what's the weather today in [Berlin](loc)
+    - what's the temperature in [Washington](loc) right now
+    - hows the weather in [Brussels](loc)
+    - i want the temperature at [Rome](loc)
+
+- intent: city
+  examples: |
+    - [Liverpool](loc)
+    - [Milan](loc)
+    - [Frankfurt](loc)
+    - [Porto](loc)
+    - [Madrid](loc)
+    - [Barcelona](loc)
+    - [Moscow](loc)
+    - [Oslo](loc)
